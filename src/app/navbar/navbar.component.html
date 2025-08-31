@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="LibraryLogo.ico" alt="Bootstrap" width="40" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav nav-tabs me-auto mb-2 mb-lg-0 nav-fill w-100">
+        @for(opt of navOptions; track $index){
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="#"
+            [ngClass]="{ active: $index === currentActiveIndex() }"
+            (click)="linkClicked($index)"
+          >
+            {{ opt }}
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+<div
+  class="offcanvas offcanvas-end offcanvas-auto"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title me-3" id="offcanvasRightLabel">
+      Navigation - Items
+    </h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-group list-group-flush">
+      @for(opt of navOptions; track $index){
+
+      <li
+        class="list-group-item"
+        [ngClass]="{ active: $index === currentActiveIndex() }"
+      >
+        <a
+          class="nav-link"
+          aria-current="page"
+          href="#"
+          (click)="linkClicked($index)"
+        >
+          {{ opt }}
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

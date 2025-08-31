@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve --watch",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "git-deploy": "ng build --base-href=\"/Library/\" && npx angular-cli-ghpages --dir=dist/Library/browser"
   },
   "private": true,
   "dependencies": {
