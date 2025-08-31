@@ -1,0 +1,15 @@
+//color pallet, can be modified to meet the theme and styling of the site.
+$color-p1: white;
+$color-p2: #141414;
+$color-p3: #1e1e1e;
+$color-p4: red;
+
+// overiding the default bootstrap variable.
+$red: $color-p4;
+
+// body styling
+$body-bg: $color-p2;
+$body-color: $color-p1;
+$font-family-base: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+  sans-serif;
+$headings-font-weight: 700;
