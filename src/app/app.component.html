@@ -2,19 +2,5 @@
   <app-navbar [navOptions]="navOptions"></app-navbar>
 </header>
 <main class="m-3 h-100">
-  <div class="d-flex flex-column justify-content-center mt-4 mb-4">
-  <div class="m-2 d-flex justify-content-center">
-    <span class="fw-bold text-danger">
-      Below accordion is a sample placeholder to indicate that the
-      angular-bootstrap configuration works!
-    </span>
-  </div>
-  <div class="m-2 d-flex justify-content-center">
-    <span class="fw-bold text-danger"
-      >Both with CSS and .JS from bootstrap to have the default styling works.
-      Accordion should expand and collapse, along with this text should be bold,
-      red and centered.
-    </span>
-  </div>
-</div>
+  <router-outlet />
 </main>
