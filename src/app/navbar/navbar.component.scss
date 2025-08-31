@@ -1,0 +1,15 @@
+@import "../../custom-scss/custom-variables";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+.offcanvas.offcanvas-auto {
+  width: auto !important;   /* let it shrink/expand */
+  max-width: 90vw;          /* keep it safe on mobile */
+}
+
+
+@include media-breakpoint-down(lg) {}
