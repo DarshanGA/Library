@@ -1,16 +1,15 @@
 {
   "navs": [
-    "Angular",
-    "APIs",
-    "Bootstrap",
-    "Docker",
-    "Git",
-    "Html & Css",
-    "Java",
-    "Npm",
-    "Others",
-    "PostgreSql",
-    "SpringBoot",
-    "Typescript"
+    { "name": "APIs", "href": "/apis" },
+    { "name": "Bootstrap", "href": "/bootstrap" },
+    { "name": "Docker", "href": "/docker" },
+    { "name": "Git", "href": "/git" },
+    { "name": "Html & Css", "href": "/htmlcss" },
+    { "name": "Java", "href": "/java" },
+    { "name": "Npm", "href": "/npm" },
+    { "name": "Others", "href": "/other" },
+    { "name": "PostgreSql", "href": "/postgresql" },
+    { "name": "SpringBoot", "href": "/springboot" },
+    { "name": "Typescript", "href": "/typescript" }
   ]
 }
