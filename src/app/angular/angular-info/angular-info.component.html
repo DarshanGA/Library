@@ -1,10 +1,22 @@
-<div class="h-100 d-flex justify-content-center">
-  <span class="fw-bold">
-    This pages will contains things that are useful in terms of -
-    <span class="fw-bold text-danger"> 'Angular' </span>
-    <span>
-      - and stuff that I frequently use. Right now, it doesn't have anything to
-      show.
-    </span>
-  </span>
+<app-page-title [titleText]="'Angular'"></app-page-title>
+<div class="h-100 w-100">
+  <app-sub-title-numb
+    [content]="'Different usage of [ngClass] binding.'"
+    [number]="'1'"
+  ></app-sub-title-numb>
+  <div class="ms-3">
+    <p>
+      In Angular, <strong>[ngClass]</strong> is exactly what you’d use to
+      conditionally control which classes an element has.
+    </p>
+    <p class="fw-bold">a. With an object</p>
+    <p>
+      We can specify the class names as 'Keys' and boolean data as their values
+      to decide which class to apply. The class names/keys with 'true' values
+      will be applied to the element.
+    </p>
+    <app-code [codeContent]="sampleData"></app-code>
+  </div>
+  
 </div>
+
