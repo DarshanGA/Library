@@ -4,7 +4,6 @@ import { NavbarComponent } from "./navbar/navbar.component";
 
 import data from "../data/app-data.json";
 import { Navs } from './models/Navs.model';
-import { AngularInfoComponent } from "./angular/angular-info/angular-info.component";
 
 @Component({
   selector: 'app-root',
