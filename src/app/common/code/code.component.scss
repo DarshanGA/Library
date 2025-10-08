@@ -1,0 +1,16 @@
+@import "../../../custom-scss/custom-variables";
+
+.code-block{
+
+    background-color: $color-p6;
+    height: fit-content;
+    width: 100%;
+}
+
+.copy-button{
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: $color-p3;
+}

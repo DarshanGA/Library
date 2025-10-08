@@ -1,7 +1,8 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Navs } from '../models/Navs.model';
+import { DataProviderService } from '../services/data-provider.service';
 
 
 @Component({
@@ -10,10 +11,20 @@ import { Navs } from '../models/Navs.model';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
-  @Input({required: true}) navOptions!:Navs[];
+  navOptions!:Navs[];
   currentActiveIndex = signal<number>(-1);
+
+  constructor(private appDataService: DataProviderService){}
+
+  ngOnInit(): void {
+    
+    this.appDataService.getAppHeaders().subscribe(response => {
+      
+      this.navOptions = response;
+    });
+  }
 
   linkClicked(clickIndex: number){
 

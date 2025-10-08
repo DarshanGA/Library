@@ -11,5 +11,22 @@
     { "name": "PostgreSql", "href": "/postgresql" },
     { "name": "SpringBoot", "href": "/springboot" },
     { "name": "Typescript", "href": "/typescript" }
+  ],
+  "angular":[
+    {
+      "contentId": 1,
+      "contentType": "html",
+      "content": "<div [ngClass]=\"{ 'col-md-6': true, 'col-12': false }\">\n  ... \n</div>"
+    },
+    {
+      "contentId": 2,
+      "contentType": "html",
+      "content": "<div [ngClass]=\"{'class1 class2 class3' : true}\">\n  ... \n</div>"
+    },
+    {
+      "contentId": 3,
+      "contentType": "html",
+      "content": "<div [ngClass]=\"{ 'col-md-6': true, 'col-12': false }\">\n  ... \n</div>"
+    }
   ]
 }

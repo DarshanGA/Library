@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 
-import data from "../data/app-data.json";
 import { Navs } from './models/Navs.model';
-import { AngularInfoComponent } from "./angular/angular-info/angular-info.component";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +12,5 @@ import { AngularInfoComponent } from "./angular/angular-info/angular-info.compon
 })
 export class AppComponent {
   title = 'Library';
-  navOptions: Navs[] = data.navs;
 
 }
