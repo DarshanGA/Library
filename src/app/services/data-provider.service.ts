@@ -1,0 +1,35 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { Navs } from '../models/Navs.model';
+import { AppJsonDataStructure } from '../models/JsonData.model';
+import { AppPages } from '../models/AppPages.model';
+import { CodeContent } from '../models/CodeContent.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataProviderService {
+
+  constructor(private http: HttpClient) { }
+
+  private dataUrl = "assets/data/app-data.json";
+
+  getAppHeaders(): Observable<Navs[]>{
+
+    return this.http.get<AppJsonDataStructure>(this.dataUrl).pipe(
+
+      map(data => data.navs)
+    );
+  }
+
+  getGivenPageData(givenPage: AppPages): Observable<CodeContent[]> {
+
+    return this.http.get<AppJsonDataStructure>(this.dataUrl).pipe(
+      map(data => {
+
+        return data.angular
+      })
+    );
+  }
+}

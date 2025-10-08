@@ -9,13 +9,20 @@
       In Angular, <strong>[ngClass]</strong> is exactly what you’d use to
       conditionally control which classes an element has.
     </p>
-    <p class="fw-bold">a. With an object</p>
+    <p class="fw-bold">a. With an object.</p>
     <p>
       We can specify the class names as 'Keys' and boolean data as their values
       to decide which class to apply. The class names/keys with 'true' values
       will be applied to the element.
     </p>
-    <app-code [codeContent]="sampleData"></app-code>
+    <app-code [codeContent]="getCodeById(1).content"></app-code>
+    <p class="fw-bold">b. With an array of css classes inside of an object.</p>
+    <app-code [codeContent]="getCodeById(2).content"></app-code>
+    <p>
+      Ultimately, we can use this directive to add or remove css classes to HTML elements based on a condition or flag. To know more about the usage of this directive, we can visit Angular's official
+      <app-hyper-link [link]="'https://angular.dev/api/common/NgClass#'" [linkText]="'NgClass Docs'"></app-hyper-link>
+      .
+    </p>
   </div>
   
 </div>
