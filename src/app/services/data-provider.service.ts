@@ -27,8 +27,10 @@ export class DataProviderService {
 
     return this.http.get<AppJsonDataStructure>(this.dataUrl).pipe(
       map(data => {
-
-        return data.angular
+        if(givenPage === AppPages.JAVA)
+          return data.java;
+        else
+          return data.angular
       })
     );
   }
