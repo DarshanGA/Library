@@ -33,5 +33,17 @@
       "contentType": "html",
       "content": "<!--app.component.html-->\n<pre [class]=\"'d-flex language-' + contentType\">\n    <code [class]=\"'language-' + contentType\" appPrismHighliter >{{codeContent}}</code>\n</pre>"
     }
+  ],
+  "java":[
+    {
+      "contentId": 1,
+      "contentType": "java",
+      "content": "public enum QRErrorCorrectionLevel{\r\n\r\n        LOW(\"11\"),\r\n        MEDIUM(\"10\"),\r\n        QUARTILE(\"01\"),\r\n        HIGH(\"00\");\r\n\r\n        private final String errorCorrectionId;\r\n\r\n        QRErrorCorrectionLevel(String givenId){\r\n\r\n            this.errorCorrectionId = givenId;\r\n        }\r\n\r\n        public String getErrorCorrectionId(){\r\n\r\n            return this.errorCorrectionId;\r\n        }\r\n    }"
+    },
+    {
+      "contentId": 2,
+      "contentType": "java",
+      "content": "//We can use the enum types as usual\nprivate QRErrorCorrectionLevel correctionLevel = QRErrorCorrectionLevel.LOW;\n\n//And if we want to retrive the value associated with it, we can do something like this\ncorrectionLevel.getErrorCorrectionId();\n//or\nQRErrorCorrectionLevel.HIGH.getErrorCorrectionId()"
+    }
   ]
 }
