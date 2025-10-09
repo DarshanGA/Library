@@ -1,10 +1,10 @@
 <app-page-title [titleText]="'Angular'"></app-page-title>
-<div class="h-100 w-100">
+<div class="container">
   <app-sub-title-numb
     [content]="'Different usage of [ngClass] binding.'"
     [number]="'1'"
   ></app-sub-title-numb>
-  <div class="container">
+  <div class="ms-4">
     <p>
       In Angular, <strong>[ngClass]</strong> is exactly what you’d use to
       conditionally control which classes an element has.
@@ -41,7 +41,7 @@
     "
     [number]="'2'"
   ></app-sub-title-numb>
-  <div class="container">
+  <div class="ms-4">
     <strong>Problem: </strong>
     <p>
       When the angular re-rendered the page via the app routing, the prismJs
