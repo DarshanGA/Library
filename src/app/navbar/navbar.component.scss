@@ -11,5 +11,9 @@
   max-width: 90vw;          /* keep it safe on mobile */
 }
 
+.nav-background{
+
+  background-color: $color-p2;
+}
 
 @include media-breakpoint-down(lg) {}

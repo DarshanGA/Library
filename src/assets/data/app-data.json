@@ -12,7 +12,7 @@
     { "name": "SpringBoot", "href": "/springboot" },
     { "name": "Typescript", "href": "/typescript" }
   ],
-  "angular":[
+  "angular": [
     {
       "contentId": 1,
       "contentType": "html",
@@ -25,8 +25,13 @@
     },
     {
       "contentId": 3,
+      "contentType": "typescript",
+      "content": "//directive.ts file content.\nimport { AfterViewInit, Directive, ElementRef } from \"@angular/core\";\r\nimport prism from \"prismjs\";\r\n\r\n@Directive({\r\n\r\n    selector: '[appPrismHighliter]',\r\n    standalone: true\r\n})\r\nexport class PrismJsHighlighterDirective implements AfterViewInit{\r\n\r\n    constructor(private codeElement: ElementRef){}\r\n\r\n    ngAfterViewInit(): void {\r\n        \r\n        prism.highlightElement(this.codeElement.nativeElement);\r\n    }\r\n\r\n\r\n}"
+    },
+    {
+      "contentId": 4,
       "contentType": "html",
-      "content": "<div [ngClass]=\"{ 'col-md-6': true, 'col-12': false }\">\n  ... \n</div>"
+      "content": "<!--app.component.html-->\n<pre [class]=\"'d-flex language-' + contentType\">\n    <code [class]=\"'language-' + contentType\" appPrismHighliter >{{codeContent}}</code>\n</pre>"
     }
   ]
 }

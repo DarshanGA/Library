@@ -15,8 +15,7 @@ import { AppPages } from '../../models/AppPages.model';
 })
 export class AngularInfoComponent implements OnInit {
 
-  sampleData = "<div [ngClass]=\"{ 'col-md-6': true, 'col-12': false }\">\n  ... \n</div>";
-  private angularPageData!: CodeContent[];
+  angularPageData!: CodeContent[];
 
   constructor(private dataService:DataProviderService){}
   
@@ -26,10 +25,5 @@ export class AngularInfoComponent implements OnInit {
 
       this.angularPageData = response;
     });
-  }
-
-  getCodeById(givenId: number): CodeContent{
-
-    return this.angularPageData.find(content => content.contentId === givenId)!;
   }
 }
