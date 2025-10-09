@@ -1,29 +1,31 @@
 <app-page-title [titleText]="'Java'"></app-page-title>
-<app-sub-title-numb
-  [content]="'Enum Creation with values.'"
-  [number]="'1'"
-></app-sub-title-numb>
 <div class="container">
-  <p>
-    If there is a requirment to have a static fixed data which could be created
-    as enum but also need to have their own data associated then, we can use
-    this enum creation with value approach.
-  </p>
-  <p>
-    Similar to our class variable creation, we can create a Enum and when
-    defining the enum types, we can associate a value against them like
-    below.
-  </p>
-  <app-code
-    [codeContent]="javaPageData[0].content"
-    [contentType]="javaPageData[0].contentType"
-  ></app-code>
-  <p>
-    When we want to specify, access or compare against an enum time, we do it as
-    usual. To access their value, we would call the getter method for a desired enum type.
-  </p>
-  <app-code
-    [codeContent]="javaPageData[1].content"
-    [contentType]="javaPageData[1].contentType"
-  ></app-code>
+  <app-sub-title-numb
+    [content]="'Enum Creation with values.'"
+    [number]="'1'"
+  ></app-sub-title-numb>
+  <div class="ms-4">
+    <p>
+      If there is a requirment to have a static fixed data which could be
+      created as enum but also need to have their own data associated then, we
+      can use this enum creation with value approach.
+    </p>
+    <p>
+      Similar to our class variable creation, we can create a Enum and when
+      defining the enum types, we can associate a value against them like below.
+    </p>
+    <app-code
+      [codeContent]="javaPageData[0].content"
+      [contentType]="javaPageData[0].contentType"
+    ></app-code>
+    <p>
+      When we want to specify, access or compare against an enum time, we do it
+      as usual. To access their value, we would call the getter method for a
+      desired enum type.
+    </p>
+    <app-code
+      [codeContent]="javaPageData[1].content"
+      [contentType]="javaPageData[1].contentType"
+    ></app-code>
+  </div>
 </div>
