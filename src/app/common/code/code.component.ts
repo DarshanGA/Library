@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { PrismJsHighlighterDirective } from './prismjs.directive';
 import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-java";
+import "prismjs/components/prism-typescript";
 
 @Component({
   selector: 'app-code',
