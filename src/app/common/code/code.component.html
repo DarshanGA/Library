@@ -1,6 +1,6 @@
 <div class="code-block rounded position-relative mt-3 mb-3">
-  <pre class="d-flex language-html">
-        <code class="language-html" appPrismHighliter >{{codeContent}}</code>
+  <pre [class]="'d-flex language-' + contentType">
+        <code [class]="'language-' + contentType" appPrismHighliter >{{codeContent}}</code>
     </pre>
   <button class="btn copy-button">
     <i>

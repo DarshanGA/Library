@@ -15,15 +15,69 @@
       to decide which class to apply. The class names/keys with 'true' values
       will be applied to the element.
     </p>
-    <app-code [codeContent]="getCodeById(1).content"></app-code>
+    <app-code
+      [codeContent]="angularPageData[0].content"
+      [contentType]="angularPageData[0].contentType"
+    ></app-code>
     <p class="fw-bold">b. With an array of css classes inside of an object.</p>
-    <app-code [codeContent]="getCodeById(2).content"></app-code>
+    <app-code
+      [codeContent]="angularPageData[1].content"
+      [contentType]="angularPageData[1].contentType"
+    ></app-code>
     <p>
-      Ultimately, we can use this directive to add or remove css classes to HTML elements based on a condition or flag. To know more about the usage of this directive, we can visit Angular's official
-      <app-hyper-link [link]="'https://angular.dev/api/common/NgClass#'" [linkText]="'NgClass Docs'"></app-hyper-link>
+      Ultimately, we can use this directive to add or remove css classes to HTML
+      elements based on a condition or flag. To know more about the usage of
+      this directive, we can visit Angular's official
+      <app-hyper-link
+        [link]="'https://angular.dev/api/common/NgClass#'"
+        [linkText]="'NgClass Docs'"
+      ></app-hyper-link>
       .
     </p>
   </div>
-  
+  <app-sub-title-numb
+    [content]="
+      'Angular attribute directive, to fix \'prismjs\' highlight problem.'
+    "
+    [number]="'2'"
+  ></app-sub-title-numb>
+  <div class="ms-3">
+    <strong>Problem: </strong>
+    <p>
+      When the angular re-rendered the page via the app routing, the prismJs
+      syntax highlighting was not getting applied.
+    </p>
+    <strong>Fix: </strong>
+    <p>
+      Using angular's attribute directive approach to re-apply the highlight
+      styles on the page rendering.
+    </p>
+    <p>
+      We need to create a directive decorated class with an attribute selector
+      like <span style="color: #a6e22e">‘appPrismHighliter’</span> which would
+      later be added to the element for which the styles need to be updated.
+      Then the class would implement angular’s
+      <span style="color: #e6db74">‘AfterViewInit’</span> interface to provide
+      the method to apply the styles after the HTML view has been rendered. Then
+      we need to import the <span style="color: #a6e22e">‘prismjs’</span> class
+      from installed node package (we need to install types for prismjs
+      explicitly if it throws type related error, we can use this node command:
+      ) and use prism.<span style="color: #e6db74">highlightElement</span>()
+      method to highlight the elements that are tagged with the selector.
+    </p>
+    <app-code
+      [codeContent]="angularPageData[2].content"
+      [contentType]="angularPageData[2].contentType"
+    ></app-code>
+    <p>
+      Once the directive is setup and ready, we need to import this in the
+      component where we plan to use this and then have this <span style="color: #a6e22e">‘appPrismHighliter’</span> selector mentioned
+      as a property on the desired html tag in that component’s template.
+    </p>
+    <app-code
+      [codeContent]="angularPageData[3].content"
+      [contentType]="angularPageData[3].contentType"
+    ></app-code>
+    
+  </div>
 </div>
-
