@@ -11,6 +11,18 @@ import "prismjs/components/prism-java";
 })
 export class CodeComponent {
 
-  @Input({required: true}) codeContent!: string;
-  @Input({required: true}) contentType!: string;
+  @Input({ required: true }) codeContent!: string;
+  @Input({ required: true }) contentType!: string;
+  isCodeCopied: boolean = false;
+
+  copyCodeToClipboard() {
+
+    navigator.clipboard.writeText(this.codeContent).then(() => {
+      this.isCodeCopied = true;
+
+      //async function to reset the copy icon after 2 seconds.
+      setTimeout(() => this.isCodeCopied = false, 2000);
+    }
+    );
+  }
 }
