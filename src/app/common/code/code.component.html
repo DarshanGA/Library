@@ -1,8 +1,8 @@
-<div class="code-block rounded position-relative mt-3 mb-3">
+<div class="code-block rounded position-relative mt-3 mb-3 ps-3">
   <pre [class]="'d-flex language-' + contentType">
-        <code [class]="'language-' + contentType" appPrismHighliter >{{codeContent}}</code>
-    </pre>
-  <button class="btn copy-button" (click)="copyCodeToClipboard()">
+          <code [class]="'language-' + contentType" appPrismHighliter >{{codeContent}}</code>
+      </pre>
+  <button class="btn btn-sm copy-button" (click)="copyCodeToClipboard()">
     <i>
       <svg
         aria-hidden="true"

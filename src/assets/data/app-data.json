@@ -45,5 +45,22 @@
       "contentType": "java",
       "content": "//We can use the enum types as usual\nprivate QRErrorCorrectionLevel correctionLevel = QRErrorCorrectionLevel.LOW;\n\n//And if we want to retrive the value associated with it, we can do something like this\ncorrectionLevel.getErrorCorrectionId();\n//or\nQRErrorCorrectionLevel.HIGH.getErrorCorrectionId()"
     }
+  ],
+  "others":[
+    {
+      "contentId": 1,
+      "contentType": "link",
+      "content": "https://civitai.com/models/120096/pixel-art-xl"
+    },
+    {
+      "contentId": 2,
+      "contentType": "link",
+      "content": "https://youtu.be/zEfBPmPDUVc?si=zw2hMSF4Ia-pnRUC / https://www.sloyd.ai/ / https://www.meshy.ai/features/ai-animation-generator"
+    },
+    {
+      "contentId": 3,
+      "contentType": "",
+      "content": ""
+    }
   ]
 }
