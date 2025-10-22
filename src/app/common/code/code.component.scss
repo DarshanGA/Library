@@ -1,10 +1,21 @@
 @import "../../../custom-scss/custom-variables";
 
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
 .code-block{
 
-    background-color: $color-p6;
     height: fit-content;
-    width: 100%;
+    max-width: 65%;
+    overflow-x: auto;
+}
+
+.code-block pre{
+
+    margin: 0;
 }
 
 .copy-button{
@@ -13,4 +24,13 @@
     top: 5px;
     right: 10px;
     background-color: $color-p3;
+}
+
+@include media-breakpoint-down (lg) {
+
+    .code-block{
+
+        max-width: 100%;
+        font-size: small;
+    }
 }

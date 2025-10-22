@@ -29,6 +29,10 @@ export class DataProviderService {
       map(data => {
         if(givenPage === AppPages.JAVA)
           return data.java;
+        else if(givenPage === AppPages.OTHERS)
+          return data.others;
+        else if(givenPage === AppPages.GIT)
+          return data.git;
         else
           return data.angular
       })
