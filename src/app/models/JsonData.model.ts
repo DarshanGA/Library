@@ -6,4 +6,5 @@ export interface AppJsonDataStructure{
     navs: Navs[];
     angular: CodeContent[];
     java: CodeContent[];
+    others: CodeContent[];
 }

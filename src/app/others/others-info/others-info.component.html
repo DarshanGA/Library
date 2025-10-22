@@ -46,4 +46,37 @@
       </li>
     </ul>
   </div>
+  <app-sub-title-numb
+    [content]="'Importing prismjs language grammer highlighter.'"
+    [number]="'2'"
+  ></app-sub-title-numb>
+  <div class="ms-4">
+    <p>
+      For code syntax highlighting, this app uses
+      <app-hyper-link
+        [link]="'https://prismjs.com/'"
+        [linkText]="'Prismjs'"
+      ></app-hyper-link>
+      library. To import additional language syntaxes, refer to the official
+      documentation link below.
+      <app-hyper-link
+        [link]="'https://prismjs.com/#supported-languages'"
+        [linkText]="'Prismjs - Supported Languages'"
+      ></app-hyper-link>
+    </p>
+    <p>
+      Also, when you npm install prismjs, you only get core + a few basics
+      (markup, CSS, JavaScript, etc.). Languages like TypeScript, Java, Python,
+      etc. are separate components under prismjs/components/.
+    </p>
+    <app-code
+      [codeContent]="othersData[0].content"
+      [contentType]="othersData[0].contentType"
+    ></app-code>
+    <p>
+      If you want to know the exact name of the module to import, you can
+      navigate under <strong>[ node_modules > prismjs > components ]</strong> to look for desired
+      language syntax to import
+    </p>
+  </div>
 </div>

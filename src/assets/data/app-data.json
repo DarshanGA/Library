@@ -49,8 +49,8 @@
   "others":[
     {
       "contentId": 1,
-      "contentType": "",
-      "content": ""
+      "contentType": "typescript",
+      "content": "import \"prismjs/components/prism-typescript\";\nimport \"prismjs/components/prism-java\";\nimport \"prismjs/components/prism-git\";"
     }
   ]
 }
