@@ -1,11 +1,29 @@
 <app-page-title [titleText]="'Git'"></app-page-title>
-<div class="h-100 d-flex justify-content-center">
-  <span class="fw-bold">
-    This pages will contains useful things related to -
-    <span class="fw-bold text-danger"> 'Git' </span>
-    <span>
-      - and stuff that I frequently use. Right now, it doesn't have anything to
-      show.
-    </span>
-  </span>
+<div class="container">
+  <app-sub-title-numb
+    [content]="'Git Integration Details.'"
+    [number]="'1'"
+  ></app-sub-title-numb>
+  <div class="ms-4">
+    <p>
+      When we create a remote repo while initializing a new git repo locally and
+      want to connect both or we want to push link and push the locally created
+      repo with the remote one: in such situations we can link them both like
+      below.
+    </p>
+    <app-code
+      [codeContent]="gitCommands[0].content"
+      [contentType]="gitCommands[0].contentType"
+    ></app-code>
+    <p>
+      If there are conflicts with git commit history between remote and local
+      repos, then we should merge the remote changes to local by pulling it and
+      then push it. Below command can be used to achieve that:
+    </p>
+    <app-code
+      [codeContent]="gitCommands[1].content"
+      [contentType]="gitCommands[1].contentType"
+    >
+    </app-code>
+  </div>
 </div>

@@ -7,4 +7,5 @@ export interface AppJsonDataStructure{
     angular: CodeContent[];
     java: CodeContent[];
     others: CodeContent[];
+    git: CodeContent[];
 }

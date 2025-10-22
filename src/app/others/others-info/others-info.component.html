@@ -75,8 +75,14 @@
     ></app-code>
     <p>
       If you want to know the exact name of the module to import, you can
-      navigate under <strong>[ node_modules > prismjs > components ]</strong> to look for desired
-      language syntax to import
+      navigate under <strong>[ node_modules > prismjs > components ]</strong> to
+      look for desired language syntax to import.
+    </p>
+    <p>
+      PrismJS language files aren’t all standalone. Some depend on base grammars
+      (like markup, clike, or bash). So if you only import prism-git without
+      prism-bash, Prism can’t properly register it — resulting in no
+      highlighting.
     </p>
   </div>
 </div>

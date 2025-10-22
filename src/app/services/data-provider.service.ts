@@ -31,6 +31,8 @@ export class DataProviderService {
           return data.java;
         else if(givenPage === AppPages.OTHERS)
           return data.others;
+        else if(givenPage === AppPages.GIT)
+          return data.git;
         else
           return data.angular
       })

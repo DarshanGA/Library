@@ -15,7 +15,7 @@ import { AppPages } from '../../models/AppPages.model';
 })
 export class AngularInfoComponent implements OnInit {
 
-  angularPageData!: CodeContent[];
+  angularPageData: CodeContent[] = [];
 
   constructor(private dataService:DataProviderService){}
   

@@ -52,5 +52,17 @@
       "contentType": "typescript",
       "content": "import \"prismjs/components/prism-typescript\";\nimport \"prismjs/components/prism-java\";\nimport \"prismjs/components/prism-git\";"
     }
+  ],
+  "git":[
+    {
+      "contentId": 1,
+      "contentType": "bash",
+      "content": "git remote add origin https://github.com/<userAccount>/<repoName>.git\ngit branch -M main\ngit push -u origin main"
+    },
+    {
+      "contentId": 2,
+      "contentType": "bash",
+      "content": "git pull origin main --allow-unrelated-histories"
+    }
   ]
 }
